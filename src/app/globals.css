@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #12262e;
+
+  --stelle-primary: #1893be;
+  --stelle-primary-dark: #126a8c;
+  --stelle-primary-light: #e4f4fa;
+  --stelle-ink: #12262e;
+  --stelle-muted: #5b7480;
+  --stelle-surface: #f6fafc;
+  --stelle-border: #e1edf1;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-stelle-primary: var(--stelle-primary);
+  --color-stelle-primary-dark: var(--stelle-primary-dark);
+  --color-stelle-primary-light: var(--stelle-primary-light);
+  --color-stelle-ink: var(--stelle-ink);
+  --color-stelle-muted: var(--stelle-muted);
+  --color-stelle-surface: var(--stelle-surface);
+  --color-stelle-border: var(--stelle-border);
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+}
+
+@keyframes fade-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-slide-in {
+  animation: fade-slide-in 0.28s ease-out;
+}
+
+/* Larger tap targets read as more deliberate on a health-related quiz. */
+.tap-target {
+  -webkit-tap-highlight-color: transparent;
+}
